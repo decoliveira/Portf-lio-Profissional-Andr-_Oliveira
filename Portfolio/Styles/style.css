@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600;700;800&display=swap');
+
+:root {
+    --cor-primaria: #2C3E50; /* Azul Escuro */
+    --cor-secundaria: #FFFFFF; /* Branco Puro */
+    --cor-terciaria: #6C9ACB; /* Azul Serenity */
+    --cor-hover: #A3C1AD; /* Verde Calmo */
+    --cor-background: #E0E0E0; /* Cinza Neutro */
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-background);
+    color: var(--cor-primaria);
+}
+
+header, footer {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+}
+
+.logo {
+    width: 150px;
+    display: flex;
+    gap: 80px;
+    border-radius: 90px;
+}
+
+.cabecalho {
+    padding: 0% 0% 0% 2%;
+}
+
+/* Estilos para a navegação e centralização */
+.cabecalho__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espaço entre o logo e os links */
+}
+
+.logo-text {
+    font-family: var(--fonte-primaria);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-secundaria);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre o texto e o ícone */
+}
+
+ion-icon {
+    font-size: 1.2rem; /* Ajuste o tamanho do ícone conforme necessário */
+    color: var(--cor-secundaria); /* Cor do ícone */
+    vertical-align: middle; /* Alinha o ícone verticalmente no meio */
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaço entre os links */
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    margin: 0 5px; /* Ajuste conforme necessário */
+    margin-bottom: 10px;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-secundaria);
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__imagem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    width: 35%;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-terciaria);
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.titulo {
+    font-family: var(--fonte-secundaria);
+    font-size: 2.25rem;
+}
+
+.titulo-app {
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+}
+
+.texto-app {
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    align-items: center; /* Alinhamento vertical */
+    gap: 8px; /* Espaço entre a imagem e o texto */
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 15px;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+    transition: background-color 0.3s ease; /* Adicionando uma transição de cor com duração de 0.3 segundos */
+}
+
+.apresentacao__links__navegacao ion-icon {
+    width: 24px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 24px; /* Ajuste o tamanho da imagem conforme necessário */
+    color: #6C9ACB;
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor-hover); /* Alterando a cor de fundo quando o mouse passa por cima */
+}
+
+.apresentacao__skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.skills-container {
+    display: flex;
+    align-items: center;
+}
+
+.skills-container.left {
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.skills-container.right {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.skills {
+    font-size: 6rem; /* Ajuste conforme necessário para o tamanho desejado */
+    width: 6rem; /* Adiciona largura */
+    height: 6rem; /* Adiciona altura */
+    margin-right: 20px;
+}
+
+.skills-container.right .skills {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Ajuste conforme necessário */
+}
+
+.skills__titulo {
+    font-size: 2rem; /* Ajuste conforme necessário */
+    font-family: var(--fonte-primaria);
+    margin-bottom: 10px;
+}
+
+.skills__titulo__right {
+    font-size: 2rem;
+    font-family: var(--fonte-primaria);
+    margin-bottom: 10px;
+    text-align: end;
+}
+
+.skills__texto {
+    font-size: 1rem; /* Ajuste conforme necessário */
+    font-family: var(--fonte-secundaria);
+    line-height: 1.5;
+}
+
+.apresentacao__hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hobbies-container {
+    flex-basis: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.hobbies-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hobbies__imagem {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hobbies__imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assegura que a imagem preencha uniformemente o espaço disponível */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hobbies__imagem:hover .overlay {
+    opacity: 1;
+}
+
+.nome-hobbie {
+    position: absolute;
+    top: 10px; /* Distância da parte superior */
+    left: 10px; /* Distância da parte esquerda */
+    background-color: rgba(3, 3, 3, 0.9); /* Cor de fundo */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Arredondamento das bordas */
+    opacity: 1; /* Inicialmente visível */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+}
+
+.receita {
+    position: absolute;
+    bottom: 10px; /* Distância da parte superior */
+    right: 10px; /* Distância da parte esquerda */
+    background-color: rgba(3, 3, 3, 0.9); /* Cor de fundo */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Arredondamento das bordas */
+    opacity: 1; /* Inicialmente visível */
+    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+}
+
+.hobbies__imagem:hover .receita {
+    opacity: 0; /* Quando o mouse passar sobre a imagem, torna-se transparente */
+}
+
+.receita-texto {
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.ingredientes {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+}
+
+.subtitulo {
+    font-style: italic;
+    margin: 25px;
+    font-size: 30px;
+    color: var(--cor-secundaria);
+}
+
+.receita-popup {
+    display: none;
+}
+
+.hobbies__imagem:hover .receita-popup {
+    display: block;
+}
+
+.hobbies__texto {
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+}
+
+.full-width {
+    flex-basis: 100%; /* Ocupa toda a largura da linha */
+}
+
+.apresentacao__formation {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 50px;
+    margin: auto;
+}
+
+
+
+.apresentacao__works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.projeto__works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px; /* Adjust according to your design */
+}
+
+.apresentacao__conteudo__works img.mockup {
+    max-width: 100%;
+    height: auto;
+}
+
+.apresentacao__texto__works {
+    margin-top: 20px; /* Space between image and text */
+}
+
+.titulo-works {
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-primaria);
+}
+
+.apresentacao__texto__works p {
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-primaria);
+}
+
+.mockup {
+    border-radius: 24px;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.video {
+    border-radius: 24px;
+    width: 60%;
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+
+.mockup-wb {
+    border-radius: 24px;
+    width: 60%;
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+
+.form-titulo {
+    margin-bottom: 25px;
+    font-family: var(--fonte-secundaria);
+}
+
+.form-texto {
+    font-family: var(--fonte-secundaria);
+}
+
+.form-container {
+    max-width: 650px; /* Defina a largura máxima do formulário */
+    margin: 0 auto; /* Isso irá centralizar o formulário horizontalmente na página */
+    background-color: var(--cor-secundaria); /* Cor de fundo do formulário */
+    padding: 20px; /* Espaçamento interno do formulário */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 100px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%; /* Ocupar toda a largura do contêiner */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento inferior entre os campos */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 3px; /* Borda arredondada */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+input[type="submit"] {
+    background-color: var(--cor-terciaria); /* Cor de fundo do botão */
+    color: var(--cor-secundaria); /* Cor do texto do botão */
+    border: none; /* Remover borda */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 3px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+}
+
+input[type="submit"]:hover {
+    background-color: var(--cor-hover); /* Alterar cor de fundo ao passar por cima */
+}
+
+.icones-container {
+    display: flex; /* Torna o contêiner um flex container */
+    justify-content: center; /* Alinha os itens ao centro horizontalmente */
+  }
+  
+  .form-redes {
+    font-size: 32px; /* Tamanho do ícone */
+    margin: 15px 10px; /* Espaçamento entre os ícones */
+    color: var(--cor-primaria);
+  }
+  .form-redes:hover{
+    font-size: 38px; /* Tamanho do ícone */
+    margin: 10px; /* Espaçamento entre os ícones */
+    color: var(--cor-hover);
+  }
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}

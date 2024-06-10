@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <script>
+        function enviarFormulario() {
+            // Pega os valores dos campos do formulário
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var mensagem = document.getElementById('mensagem').value;
+
+            // Verifica se algum campo está vazio
+            if (nome === '' || email === '' || mensagem === '') {
+                alert('Por favor, preencha todos os campos do formulário.');
+                return false; // Impede o envio do formulário
+            }
+
+            // Simulando o envio do formulário (substitua este bloco pelo envio real)
+            // Aqui você pode implementar a lógica para enviar o e-mail usando uma linguagem de servidor como PHP, Node.js, etc.
+            // Após o envio bem-sucedido, exiba a mensagem de sucesso
+            alert('Mensagem enviada com sucesso!');
+            return true; // Permite o envio do formulário
+        }
+    </script>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <div class="logo-container">
+                <h1 class="logo-text">André <ion-icon name="medical-outline"></ion-icon> Oliveira</h1>
+            </div>
+            <div class="links-container">
+                <a class="cabecalho__menu__link" href="index.html">Home</a>
+                <a class="cabecalho__menu__link" href="about.html">Sobre</a>
+                <a class="cabecalho__menu__link" href="skills.html">Skills</a>
+                <a class="cabecalho__menu__link" href="hobbies.html">Hobbies</a>
+                <a class="cabecalho__menu__link" href="formation.html">Formação</a>
+                <a class="cabecalho__menu__link" href="works.html">Projetos</a>
+                <a class="cabecalho__menu__link" href="contacts.html">Contatos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <h1 class="form-titulo">Entre em Contato</h1>
+
+        <form action="enviar_email.php" method="POST" onsubmit="return enviarFormulario();">
+            <label class="form-texto" for="nome">Nome:</label><br>
+            <input class="form-texto" type="text" id="nome" name="nome" required><br>
+            <label class="form-texto" for="email">Email:</label><br>
+            <input class="form-texto" type="email" id="email" name="email" required><br>
+            <label class="form-texto" for="mensagem">Mensagem:</label><br>
+            <textarea class="form-texto" id="mensagem" name="mensagem" rows="4" required></textarea><br>
+            <input class="form-texto" type="submit" value="Enviar" disabled>
+        </form>
+
+        <div class="icones-container">
+            <a href="https://github.com/decoliveira"><ion-icon class="form-redes" name="logo-github"></ion-icon></a>
+            <a href="https://linkedin.com/in/decoliveira"><ion-icon class="form-redes" name="logo-linkedin"></ion-icon></a>
+            <a href="https://instagram.com/_decoliveira"><ion-icon class="form-redes" name="logo-instagram"></ion-icon></a>
+        </div>
+    </main>
+    
+    <footer class="rodape">
+    </footer>
+</body>
+</html>
